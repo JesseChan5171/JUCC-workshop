@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="You can use a flow to train a model when it runs. Normally, to test the model, you might run the modeling node to add the model to the flow, make the appropriate connections, and run an Analysis node.">
+<meta name="keywords" content="scripting example, flows, example">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="flow_scripting.html">
+<title>SPSS Modeler flow scripting example</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/flow_scripting_example.html">
+</head>
+<body id="flow_scripting_example"><main role="main"><article role="article" aria-labelledby="flow_scripting_example__title__1">
+<h1 class="topictitle1" id="flow_scripting_example__title__1">Flow scripting example</h1>
+
+
+
+
+<div class="body"><p class="shortdesc">You can use a flow to train a model when it runs. Normally, to test the
+model, you might run the modeling node to add the model to the flow, make the appropriate
+connections, and run an Analysis node. </p>
+
+<p>Using a script, you can automate the process of testing the model nugget after you create it. For
+example, you might use a script such as the following to train a neural network model:</p>
+
+<pre class="codeblock language-shell"><code class="language-shell">stream = modeler.script.stream()
+neuralnetnode = stream.findByType("neuralnetwork", None)
+results = []
+neuralnetnode.run(results)
+appliernode = stream.createModelApplierAt(results[0], "Drug", 594, 187)
+analysisnode = stream.createAt("analysis", "Drug", 688, 187)
+typenode = stream.findByType("type", None)
+stream.linkBetween(appliernode, typenode, analysisnode)
+analysisnode.run([])</code></pre>
+<p>The following bullets describe each line in this script example.</p>
+
+<ul>
+<li>The first line defines a variable that points to the current flow.</li>
+
+<li>In line 2, the script finds the Neural Net builder node.</li>
+
+<li>In line 3, the script creates a list where the execution results can be stored.</li>
+
+<li>In line 4, the Neural Net model nugget is created. This is stored in the list defined on line
+3.</li>
+
+<li>In line 5, a model apply node is created for the model nugget and placed on the flow
+canvas.</li>
+
+<li>In line 6, an analysis node called <code class="ph codeph">Drug</code> is created.</li>
+
+<li>In line 7, the script finds the Type node.</li>
+
+<li>In line 8, the script connects the model apply node created in line 5 between the Type node and
+the Analysis node.</li>
+
+<li>Finally, the Analysis node runs to produce the Analysis report.</li>
+
+</ul>
+
+<div class="note note"><span class="notetitle">Tips:</span> 
+<ul>
+<li>It's possible to use a script to build and run a flow from scratch, starting with a blank
+canvas.</li>
+
+<li>For complete details about scripting, see the <a href="nodes/scripting_guide/clementine/scripting_overview.html">Scripting and
+automation</a> guide.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<aside role="complementary" aria-labelledby="flow_scripting_example__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="flow_scripting.html" title="You can use scripts to customize operations within a particular flow, and they're saved with that flow. For example, you might use a script to specify a particular run order for terminal nodes. You use the flow properties page to edit the script that is saved with the current flow.">Flow scripting</a></div>
+</div>
+</nav></aside></article></main></body></html>

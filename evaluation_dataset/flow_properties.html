@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="You can specify properties to apply to the current flow.">
+<meta name="keywords" content="CPLEX Optimization node, overview">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="models-overview.html">
+<title>Setting properties for SPSS Modeler flows</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/flow_properties.html">
+</head>
+<body id="flow_properties"><main role="main"><article role="article" aria-labelledby="flow_properties__title__1">
+<h1 class="topictitle1" id="flow_properties__title__1">Setting properties for flows</h1>
+
+
+
+
+<div class="body"><p class="shortdesc">You can specify properties to apply to the current flow.</p>
+
+<p>To set flow properties, click the <span class="ph uicontrol">Flow Properties</span> icon <img src="images/flow_properties.png" width="20" alt="">.</p>
+
+<p>You can configure the following properties.</p>
+
+<section class="section" role="region" aria-labelledby="flow_properties__title__2"><h2 class="sectiontitle" id="flow_properties__title__2">Options</h2>
+
+<dl>
+
+<dt class="dlterm">General</dt>
+
+<dd class="dlentry">
+<dl>
+
+<dt class="dlterm">Maximum number of rows to show in Data Preview</dt>
+
+<dd class="dlentry">When you preview the data for a node, you can specify the number of rows to show.</dd>
+
+
+
+<dt class="dlterm">Limit members for nominal fields</dt>
+
+<dd class="dlentry">The data type of the nominal (set) fields becomes <span class="ph uicontrol">Typeless</span> when the
+number of members exceeds the maximum number of members that you set in <span class="ph uicontrol">Maximum
+members</span>. This option is useful when you are working with large nominal fields. When the
+measurement level of a field is set to <span class="ph uicontrol">Typeless</span>, its role is automatically
+set to <span class="ph uicontrol">None</span>. Fields that are set to <span class="ph uicontrol">None</span> aren't
+available for modeling.</dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dlterm">Date/Time</dt>
+
+<dd class="dlentry">
+<dl>
+
+<dt class="dlterm">Import date/time/timestamp as</dt>
+
+<dd class="dlentry">Select whether to use a date and time format for storing data in date and time fields or whether
+to import them as string variables.</dd>
+
+
+
+<dt class="dlterm">Use microseconds in timestamp fields</dt>
+
+<dd class="dlentry">If you have timestamp data that is measured in microseconds, you can enable this option to use
+the more precise data in your flows. To enable the option, select this checkbox and
+<span class="ph uicontrol">String</span> for the <span class="ph uicontrol">Import date/time/timestamp as</span>
+setting.<div class="note"><span class="notetitle">Note:</span> This option works only for connectors that support SQL pushback.
+</div>
+</dd>
+
+
+
+<dt class="dlterm">Date format</dt>
+
+<dd class="dlentry">Select a date format to use for date storage fields or when strings are interpreted as dates by
+CLEM date functions.</dd>
+
+
+
+<dt class="dlterm">Time format</dt>
+
+<dd class="dlentry">Select a time format to use for time storage fields or when strings are interpreted as times by
+CLEM time functions.</dd>
+
+
+
+<dt class="dlterm">Rollover days/mins</dt>
+
+<dd class="dlentry">For time formats, select whether negative time differences are interpreted as referring to the
+previous day or hour.</dd>
+
+
+
+<dt class="dlterm">Date baseline (1st Jan)</dt>
+
+<dd class="dlentry">Select the baseline years (always 1 January) to be used by CLEM date functions that work with a
+single date.</dd>
+
+
+
+<dt class="dlterm">2-digit dates start from</dt>
+
+<dd class="dlentry">Specify the cutoff year to add century digits for years that are denoted with only 2 digits. For
+example, specifying 1930 as the cutoff year assumes that 05/11/02 is in the year 2002. The same
+setting will use the 20th century for dates after 30; thus 05/11/73 is assumed to be in 1973.</dd>
+
+
+
+<dt class="dlterm">Time zone</dt>
+
+<dd class="dlentry">Select how the time zone is chosen for use with the <code class="ph codeph">datetime_now</code> CLEM
+expression.<ul>
+<li>If you select <span class="ph uicontrol">Server</span>, the time
+zone is used from where the SPSS Modeler run-time is running
+(sometimes this time is the same as the <span class="ph uicontrol">Client</span> option). Or if your flow uses
+data from a database and the supported database uses SQL pushback, the <code class="ph codeph">datetime_now</code>
+expression uses the time of the database. </li>
+
+
+<li>If you select <span class="ph uicontrol">Client</span>, the time zone is used from the machine where SPSS
+Modeler is installed.</li>
+
+<li>Alternatively, you can select any of the Coordinated Universal Time values for the time
+zone.</li>
+
+</ul>
+</dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dlterm">Number Formats</dt>
+
+<dd class="dlentry">You can specify the number of decimal places to use when <span class="keyword">SPSS Modeler</span> displays real numbers in standard, scientific, or currency display formats.</dd>
+
+
+
+<dt class="dlterm">Optimization</dt>
+
+<dd class="dlentry">You can use these settings to optimize flow performance. <dl>
+
+<dt class="dlterm">Enable flow rewriting</dt>
+
+<dd class="dlentry">Flow rewriting reorders the nodes in a flow behind the scenes for more efficient operation,
+without altering flow semantics.</dd>
+
+
+
+<dt class="dlterm">Optimize CLEM expressions</dt>
+
+<dd class="dlentry">This option enables the optimizer to search for CLEM expressions that can be preprocessed before
+the flow runs to increase the processing speed. For example, if you have an expression such as
+<code class="ph codeph">log(salary)</code>, the optimizer calculates the actual salary value and passes that on
+for processing. This option can be used to improve both SQL pushback and <span class="keyword">SPSS Modeler</span> performance.</dd>
+
+
+
+<dt class="dlterm">Optimize syntax execution</dt>
+
+<dd class="dlentry">This method of flow rewriting increases the efficiency of operations that have more than one
+node that contains SPSS Statistics syntax. Optimization is achieved by combining the syntax commands
+into a single operation, instead of running each as a separate operation.</dd>
+
+
+
+<dt class="dlterm">Optimize other execution</dt>
+
+<dd class="dlentry">This method of flow rewriting increases the efficiency of operations that can't be delegated to
+the database. Optimization is achieved by reducing the amount of data in the flow as early as
+possible. The flow is rewritten to push operations closer to the data source while maintaining data
+integrity. This change reduces data downstream for costly operations, such as joins.</dd>
+
+
+
+<dt class="dlterm">Enable parallel processing</dt>
+
+<dd class="dlentry">When running on a computer with multiple processors, this option allows the system to balance
+the load across those processors, which can result in faster performance. Use of multiple nodes or
+use of the following individual nodes can benefit from parallel processing: C5.0, Merge (by key),
+Sort, Bin (rank and tile methods), and Aggregate (using one or more key fields).</dd>
+
+
+
+<dt class="dlterm">Generate SQL</dt>
+
+<dd class="dlentry">
+<ul>
+<li>This option pushes SQL processing back to the database. Turning this option on or off affects
+only the new flows that you create. You cannot switch the setting for an existing flow. For more
+information about using this option with flows, see <a href="sql_overview.html#sql_overview__note_OptimizationTips">SQL optimization</a>.<ul>
+<li><span class="ph uicontrol">Database caching (SQL only)</span>. For flows that generate SQL to be run in the
+database, data can be cached mid flow to a temporary table in the database rather than to the file
+system. When combined with SQL optimization, this option can result in significant gains in
+performance. For example, the output from a flow that merges multiple tables to create a data mining
+view may be cached and reused as needed. With database caching enabled, hover over any nonterminal
+node in your flow, then click the overflow menu <img src="images/actions.png" alt=""> and
+select <span class="ph menucascade"><span class="ph uicontrol">Cache</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Enable</span></span>. Data is
+now cached at this node, and the cache is automatically created directly in the database the next
+time the flow runs. This allows SQL to be generated for downstream nodes, further improving
+performance. Alternatively, this option can be disabled if needed, such as when policies or
+permissions preclude data being written to the database. If database caching or SQL optimization is
+not enabled, the cache is written to the file system instead.</li>
+
+<li><span class="ph uicontrol">Use relaxed conversion (SQL only)</span>. This option enables the conversion of
+data from either strings to numbers, or numbers to strings, if stored in a suitable format. For
+example, if the data is kept in the database as a string, but actually contains a meaningful number,
+the data can be converted for use when the pushback occurs.</li>
+
+</ul>
+</li>
+
+</ul>
+
+
+</dd>
+
+
+</dl>
+</dd>
+
+
+
+<dt class="dlterm">Logging</dt>
+
+<dd class="dlentry">
+<dl>
+
+<dt class="dlterm">Display SQL in the messages log at run time</dt>
+
+<dd class="dlentry">Specifies whether SQL generated while running the flow is passed to the messages log.</dd>
+
+
+
+<dt class="dlterm">Display SQL generation in the message log during preparation</dt>
+
+<dd class="dlentry">During flow preview, specifies whether a preview of the SQL that would be generated is passed to
+the messages log.</dd>
+
+
+
+<dt class="dlterm">SQL format</dt>
+
+<dd class="dlentry">Specifies whether any SQL that's displayed in the log should contain native SQL functions or
+standard ODBC functions of the form <code class="ph codeph">{fn FUNC(…)}</code>, as generated by <span class="keyword">SPSS Modeler</span>. The former relies on ODBC driver functionality that may not be
+implemented.</dd>
+
+
+
+<dt class="dlterm">Reformat SQL for improved readability</dt>
+
+<dd class="dlentry">Specifies whether SQL displayed in the log should be formatted for readability.</dd>
+
+
+
+<dt class="dlterm">Show status for records</dt>
+
+<dd class="dlentry">Specifies when records should be reported as they arrive at terminal nodes. Specify a number to
+use for updating the status every <em>N</em> records.</dd>
+
+
+</dl>
+
+</dd>
+
+
+</dl>
+
+
+</section>
+
+
+<section class="section" role="region" aria-labelledby="flow_properties__title__3"><h2 class="sectiontitle" id="flow_properties__title__3">Parameters</h2><span class="ph">Parameters are user-defined variables that are saved and
+   persisted with the current flow or SuperNode. Parameters are often used in scripting to control
+   the behavior of the script, and they can be accessed from the user interface as
+  well.</span><p><span class="ph">You can define parameters for use in CLEM expressions and in
+    scripting. Parameters that are defined in the flow properties are available to all nodes in the
+    flow.</span>
+<span class="ph">Parameters set for a SuperNode are
+     not available outside of the SuperNode.</span>
+<span class="ph">If you save a flow, any parameters set for that flow are also
+    saved.</span></p>
+<p>For more information about
+parameters, see <a href="parameters.html">Flow and SuperNode
+parameters</a>.</p>
+<p>Click
+<span class="ph uicontrol">Add value</span> and enter the following information for the new parameter: </p>
+<dl>
+
+<dt class="dlterm">Name</dt>
+
+<dd class="dlentry">This name is how the parameter is referenced in expressions. For example, to create a parameter
+for a minimum temperature, you could enter <kbd class="ph userinput">minvalue</kbd>. <p>When parameters are
+used in CLEM expressions, they are placed within single quotation marks, for example,
+<code class="ph codeph">'$P-minvalue'</code>. Do not enter the <code class="ph codeph">$P-</code> prefix. It denotes a parameter
+in CLEM expressions. </p>
+</dd>
+
+
+
+<dt class="dlterm">Label</dt>
+
+<dd class="dlentry">Lists a descriptive name for each parameter created.</dd>
+
+
+
+<dt class="dlterm">Storage</dt>
+
+<dd class="dlentry">Storage indicates how the data values are stored in the parameter. For example, if values have
+leading zeros that you want to preserve (such as <code class="ph codeph">008</code>), select
+<span class="ph uicontrol">String</span> as the storage type. Otherwise, the zeros are stripped from the
+value.</dd>
+
+
+
+<dt class="dlterm">Value</dt>
+
+<dd class="dlentry">Lists the current value for each parameter, which you can change as needed. Values for date
+parameters must be specified in ISO standard notation (YYYY-MM-DD).</dd>
+
+
+
+<dt class="dlterm">Measure</dt>
+
+<dd class="dlentry">Select the measurement level, which is used to describe characteristics of the parameter. You
+can change this value to reflect the way that you intend to use the parameter. For example,
+<span class="ph uicontrol">Typeless</span> indicates that the parameter can have any value compatible with its
+storage.</dd>
+
+
+
+<dt class="dlterm">Prompt?</dt>
+
+<dd class="dlentry">Select this option if you want users to be prompted to enter a value for this parameter when
+they start the runtime. You can use this option where you might need to enter different values for
+the same parameter on different
+occasions.</dd>
+
+
+</dl>
+</section>
+
+<section class="section" role="region" aria-labelledby="flow_properties__title__4"><h2 class="sectiontitle" id="flow_properties__title__4">Globals</h2>
+
+<p>In the <span class="ph uicontrol">Globals</span> tab of the flow properties, you can view the global values
+set for the current flow. Global values are created using a <span class="ph uicontrol">Set Globals</span> node
+to determine statistics such as mean, sum, or standard deviation for selected fields.</p>
+
+<p>After a <span class="ph uicontrol">Set Globals</span> node runs, these values become available for various
+uses in flow operations.</p>
+
+<p>You can't edit global values in the table here in the flow properties, but you can clear all
+global values for a flow.</p>
+
+</section>
+
+<section class="section" role="region" aria-labelledby="flow_properties__title__5"><h2 class="sectiontitle" id="flow_properties__title__5">Annotations</h2>
+
+<p>If you need to describe a flow to others in your organization, you can attach explanatory
+comments to flows, nodes, and model nuggets. Others can then view these comments on-screen or even
+print an image of the flow that includes your comments.</p>
+
+<p>Use the <span class="ph uicontrol">Annotations</span> tab of the flow properties to add text annotations to
+your flow. These notes are visible only when the <span class="ph uicontrol">Annotations</span> tab is open,
+except that flow annotations can also be shown as on-screen comments.</p>
+
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="flow_properties__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="models-overview.html" title="In SPSS Modeler, you set up flows to process data and experiment with different modeling techniques. Through the modeling process, you create tuned model that you can use for predictive analytics.">Building flows and models</a></div>
+</div>
+</nav></aside></article></main></body></html>

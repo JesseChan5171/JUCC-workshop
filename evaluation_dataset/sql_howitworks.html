@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="The initial fragments of a flow leading from the data import nodes are the main targets for SQL generation. When a node is encountered that can't be compiled to SQL, the data is extracted from the database and subsequent processing is performed.">
+<meta name="keywords" content="SQL generation, how does it work?, SQL pushback">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="sql_overview.html">
+<title>SQL optimization (SPSS Modeler)</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/sql_howitworks.html">
+</head>
+<body id="sql_clem"><main role="main"><article role="article" aria-labelledby="sql_clem__title__1">
+<h1 class="topictitle1" id="sql_clem__title__1">How does SQL pushback work?</h1>
+
+
+
+
+<div class="body"><p class="shortdesc">The initial fragments of a flow leading from the data import nodes are the main targets
+for SQL generation. When a node is encountered that can't be compiled to SQL, the data is extracted
+from the database and subsequent processing is performed.</p>
+
+<p>During flow preparation and prior to running, the SQL generation process happens as follows: </p>
+
+<ul>
+<li>The software reorders flows to move downstream nodes into the “SQL zone” where it can be proven
+safe to do so. 
+</li>
+
+<li>Working from the import nodes toward the terminal nodes, SQL expressions are constructed
+incrementally. This phase stops when a node is encountered that can't be converted to SQL or when
+the terminal node (for example, a Table node or a Graph node) is converted to SQL. At the end of
+this phase, each node is labeled with an SQL statement if the node and its predecessors have an SQL
+equivalent.</li>
+
+<li>Working from the nodes with the most complicated SQL equivalents back toward the import nodes,
+the SQL is checked for validity. The SQL that was successfully validated is chosen for execution. </li>
+
+<li>Nodes for which all operations have generated SQL are highlighted with a
+<span class="ph uicontrol">SQL</span> icon next to the node on the flow canvas. Based on the results, you may
+want to further reorganize your flow where appropriate to take full advantage of database execution.
+</li>
+
+</ul>
+
+<section class="section" role="region" aria-labelledby="sql_clem__title__2"><h2 class="sectiontitle" id="sql_clem__title__2">Where do improvements occur?</h2>
+
+<p>SQL pushback improves performance in a number of data operations:</p>
+
+<ul>
+<li><span class="ph uicontrol">Joins (merge by key).</span> Join operations can increase optimization within
+databases.</li>
+
+<li><span class="ph uicontrol">Aggregation.</span> The Aggregate, Distribution, and Web nodes all use
+aggregation to produce their results. Summarized data uses considerably less bandwidth than the
+original data.</li>
+
+<li><span class="ph uicontrol">Selection.</span> Choosing records based on certain criteria reduces the
+quantity of records.</li>
+
+<li><span class="ph uicontrol">Sorting.</span> Sorting records is a resource-intensive activity that is
+performed more efficiently in a database.</li>
+
+<li><span class="ph uicontrol">Field derivation.</span> New fields are generated more efficiently in a
+database.</li>
+
+<li><span class="ph uicontrol">Field projection.</span> The software extracts only fields that are required for
+subsequent processing from the database, which minimizes bandwidth and memory requirements. The same
+is also true for superfluous fields in flat files: although the software must read the superfluous
+fields, it doesn't allocate any storage for them. </li>
+
+<li><span class="ph uicontrol">Scoring.</span> SQL can be generated from decision trees, rulesets, linear
+regression, and factor-generated models.</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="sql_clem__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="sql_overview.html" title="You can push many data preparation and mining operations directly in your database to improve performance.">SQL optimization</a></div>
+</div>
+</nav></aside></article></main></body></html>

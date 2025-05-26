@@ -1,0 +1,215 @@
+[
+    {
+      "question": "Which two methods can you use to visualize data in SPSS Modeler: one inside a flow using a specific node, and another via an external service mentioned in the documentation?",
+      "correct_answer": "Use a Charts node to open the chart builder within a flow, and use the Data Refinery service to visualize your data externally.",
+      "correct_answer_document_ids": [
+        "dataview.html"
+      ]
+    },
+    {
+      "question": "How do you access scripting in a SPSS Modeler flow and what scripting language is used by default?",
+      "correct_answer": "Click the Scripting option in the flow’s properties toolbar to open the script editor, and Python is the default scripting language.",
+      "correct_answer_document_ids": [
+        "flow_scripting.html"
+      ]
+    },
+    {
+      "question": "What video platforms are used for the SPSS Modeler introduction tutorial and the flow import migration guide?",
+      "correct_answer": "The introduction tutorial uses the IBM video platform (video.ibm.com), and the import migration guide uses Ustream (ustream.tv).",
+      "correct_answer_document_ids": [
+        "getting-started.html"
+      ]
+    },
+    {
+      "question": "What file extension is used for SPSS Modeler streams and which flow property option enables behind-the-scenes node reordering for performance optimization?",
+      "correct_answer": "Streams use the .str file extension, and the 'Enable flow rewriting' option enables automatic node reordering for optimization.",
+      "correct_answer_document_ids": [
+        "migration.html"
+      ]
+    },
+    {
+      "question": "In the flow scripting example, what method is used to link a model apply node to an analysis node, and where do you specify that the script runs when the flow runs?",
+      "correct_answer": "The method stream.linkBetween(appliernode, typenode, analysisnode) is used to link the nodes, and you select 'Run the script' in the Scripting tab of the flow properties to have it execute each time the flow runs.",
+      "correct_answer_document_ids": [
+        "flow_scripting_example.html"
+      ]
+    },
+    {
+        "question": "What methodology does SPSS Modeler follow and which feature do you use to visualize data with histograms, box plots, bar charts, and pie charts within a flow?",
+        "correct_answer": "SPSS Modeler follows the CRISP-DM methodology, and you use the Chart builder feature to visualize data with histograms, box plots, bar charts, and pie charts within a flow.",
+        "correct_answer_document_ids": [
+          "data.html"
+        ]
+      },
+      {
+        "question": "How do you view help for a specific node in the Nodes palette and what are the initial phases you should complete before starting data mining in SPSS Modeler?",
+        "correct_answer": "In the Nodes palette, click the information icon next to a node to open its Help; before starting data mining, complete the business understanding, data understanding, and data preparation phases of the CRISP-DM methodology.",
+        "correct_answer_document_ids": [
+          "getting-started.html"
+        ]
+      },
+      {
+        "question": "Which file extension denotes SPSS Modeler streams and which CRISP-DM phases does data preparation cover?",
+        "correct_answer": "SPSS Modeler streams use the .str file extension, and data preparation covers the collection, assessment, and preparation phases of the CRISP-DM methodology.",
+        "correct_answer_document_ids": [
+          "migration.html"
+        ]
+      },
+      {
+        "question": "How do you define parameters in SPSS Modeler flows and how can you access the flow scripting editor to customize operations within a flow?",
+        "correct_answer": "You define parameters by opening Flow properties and clicking Add value to set parameters available to all nodes; you access the scripting editor by clicking Scripting in the flow’s toolbar.",
+        "correct_answer_document_ids": [
+          "flow_properties.html"
+        ]
+      },
+      {
+        "question": "Why is data preparation critical to data mining and where can you view global statistics like mean and sum after running a Set Globals node?",
+        "correct_answer": "Data preparation is critical because it cleans and optimizes your data for analysis, directly impacting model quality; you view global statistics such as mean and sum in the Globals tab of Flow properties after a Set Globals node runs.",
+        "correct_answer_document_ids": [
+          "data.html"
+        ]
+      },
+      {
+        "question": "What is a flow and what is a node in SPSS Modeler?",
+        "correct_answer": "A flow is a group of data-processing operations connected in sequence representing the flow of data through each operation; a node is a modular, self-contained set of operations represented graphically with a unique icon.",
+        "correct_answer_document_ids": [
+          "models-overview.html"
+        ]
+      },
+      {
+        "question": "How do you define parameters for flows and what distinguishes flow parameters from local script variables?",
+        "correct_answer": "You define parameters in the flow properties or in a flow script; flow parameters are saved with the flow and are available to all nodes, whereas local script variables exist only within the script in which they’re declared.",
+        "correct_answer_document_ids": [
+          "parameters.html"
+        ]
+      },
+      {
+        "question": "How are parameters represented in CLEM expressions and how can you use them in scripting?",
+        "correct_answer": "In CLEM expressions, parameters are represented as '$P-pname' enclosed in single quotes (for example, '$P-scale'); in scripting, you reference parameters (like a 'minvalue' parameter) to avoid hardcoding values and control script behavior dynamically.",
+        "correct_answer_document_ids": [
+          "parameters.html"
+        ]
+      },
+      {
+        "question": "What are three benefits of deploying SPSS Modeler models to watsonx.ai Runtime?",
+        "correct_answer": "Real-time insights for faster decision-making, scalability to handle growing data and demand, and integration via API endpoints into other systems and applications.",
+        "correct_answer_document_ids": [
+          "save_model.html"
+        ]
+      },
+      {
+        "question": "In what two ways can you save models for sharing and what does PMML stand for?",
+        "correct_answer": "You can save models as a scoring branch or as Predictive Model Markup Language (PMML); PMML is an XML format for describing data mining and statistical models.",
+        "correct_answer_document_ids": [
+          "save_model.html"
+        ]
+      },
+      {
+        "question": "Which guide provides information about SPSS Modeler algorithms and where can you download it?",
+        "correct_answer": "The SPSS Modeler Algorithms Guide provides detailed information on the statistical algorithms behind nodes, and you can download it as a PDF from the IBM public documentation site.",
+        "correct_answer_document_ids": [
+          "reference_guides.html"
+        ]
+      },
+      {
+        "question": "What is the main work area in SPSS Modeler and name two tips for working quickly from the tips guide?",
+        "correct_answer": "The canvas is the main work area; you can double-click a node to open its properties quickly and drag a new node onto a connection line to insert it between existing nodes.",
+        "correct_answer_document_ids": [
+          "models-overview.html"
+        ]
+      },
+      {
+        "question": "Which topics are linked under the Reference information section and what does each cover?",
+        "correct_answer": "“Tips and shortcuts” covers productivity tips like searching and editing nodes, “Troubleshooting SPSS Modeler” covers resolving issues, “CLEM (legacy) language reference” describes the Control Language for Expression Manipulation, and “SPSS algorithms” links to the Algorithms Guide PDF for advanced algorithm details.",
+        "correct_answer_document_ids": [
+          "reference_guides.html"
+        ]
+      },
+      {
+        "question": "How do you save a SPSS Modeler flow or model to a project asset and then promote it to a deployment space?",
+        "correct_answer": "Click the Save Model icon, select the terminal node to turn into a model, enter a name and save it to your project; then in the Assets tab find the model or flow, open its overflow menu, choose “Promote to space,” select the target deployment space, and click Promote.",
+        "correct_answer_document_ids": [
+          "save_model.html"
+        ]
+      },
+      {
+        "question": "According to the Tips and shortcuts guide, what keyboard shortcuts run a single branch and run the entire flow?",
+        "correct_answer": "Ctrl+Enter runs the branch where the focus is, and Ctrl+Shift+Enter runs the entire flow.",
+        "correct_answer_document_ids": [
+          "spss_tips.html"
+        ]
+      },
+      {
+        "question": "How do you create a new comment in an SPSS Modeler flow and move it into edit mode?",
+        "correct_answer": "Right-click the flow canvas, select the overflow menu ▶ New comment, move the comment to the desired location, then double-click it to open in edit mode.",
+        "correct_answer_document_ids": [
+          "spss-comments.html"
+        ]
+      },
+      {
+        "question": "What modes are available for comment text boxes in SPSS Modeler and what does the 'view' mode indicate?",
+        "correct_answer": "The modes are Edit, Last selected, and View; View mode indicates that editing is complete.",
+        "correct_answer_document_ids": [
+          "spss-comments.html"
+        ]
+      },
+      {
+        "question": "Which connectors support both Read & Write and SQL pushback in SPSS Modeler? Give one example.",
+        "correct_answer": "Connectors such as Amazon RDS for PostgreSQL and Amazon Redshift support both Read & Write and SQL pushback; for example, Amazon Redshift supports Read & Write and SQL pushback.",
+        "correct_answer_document_ids": [
+          "spss-connections.html"
+        ]
+      },
+      {
+        "question": "How can you connect to Apache Hive from SPSS Modeler and does it support Read-Only or SQL pushback?",
+        "correct_answer": "The Apache Hive connector supports Read-Only and also SQL pushback.",
+        "correct_answer_document_ids": [
+          "spss-connections.html"
+        ]
+      },
+      {
+        "question": "What is SPSS Modeler and which methodology does it follow for data mining?",
+        "correct_answer": "SPSS Modeler is a visual data mining application for building flows without programming, and it follows the CRISP-DM methodology.",
+        "correct_answer_document_ids": [
+          "spss-modeler.html"
+        ]
+      },
+      {
+        "question": "What data formats can SPSS Modeler process and which file extensions are supported for tabular data files?",
+        "correct_answer": "It can process relational, tabular, and textual data; supported tabular file extensions include .xls, .csv, .json, and .sas (only the first sheet for Excel files).",
+        "correct_answer_document_ids": [
+          "spss-modeler.html"
+        ]
+      },
+      {
+        "question": "What phases are defined by the CRISP-DM methodology in SPSS Modeler and what is the focus of the data preparation phase?",
+        "correct_answer": "The phases are Business understanding, Data understanding, Data preparation, Modeling, Deployment, and Evaluation; data preparation focuses on processing and optimizing your data for mining.",
+        "correct_answer_document_ids": [
+          "spss-modeling-process.html"
+        ]
+      },
+      {
+        "question": "Name two mathematical operators and one string operator that support SQL generation in SPSS Modeler.",
+        "correct_answer": "Operators like + and - support SQL generation, and the >< operator concatenates strings.",
+        "correct_answer_document_ids": [
+          "sql_clem.html"
+        ]
+      },
+      {
+        "question": "Describe how SPSS Modeler performs SQL pushback when it encounters a node that cannot be compiled to SQL.",
+        "correct_answer": "It reorders downstream nodes into the SQL zone, incrementally builds SQL until a non-SQL-equivalent node is reached, then extracts data from the database at that point and continues processing thereafter.",
+        "correct_answer_document_ids": [
+          "sql_howitworks.html"
+        ]
+      },
+      {
+        "question": "List two ways SQL pushback improves database performance in SPSS Modeler.",
+        "correct_answer": "It pushes join operations (merge by key) into the database to reduce data transfer, and it pushes aggregation operations (Aggregate, Distribution nodes) into the database to summarize data and minimize bandwidth.",
+        "correct_answer_document_ids": [
+          "sql_howitworks.html"
+        ]
+      }
+
+  
+]
+  

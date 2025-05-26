@@ -1,0 +1,768 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="The tables in this section list the mathematical operations and expressions that support SQL generation and are often used during data mining. Operations absent from these tables don't support SQL generation.">
+<meta name="keywords" content="SQL generation, supported CLEM expressions and operators, SQL pushback">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="sql_overview.html">
+<title>SQL optimization (SPSS Modeler)</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/sql_clem.html">
+</head>
+<body id="sql_clem"><main role="main"><article role="article" aria-labelledby="sql_clem__title__1">
+<h1 class="topictitle1" id="sql_clem__title__1">CLEM expressions and operators supporting SQL pushback</h1>
+
+
+
+
+<div class="body"><p class="shortdesc">The tables in this section list the mathematical operations and expressions that support
+SQL generation and are often used during data mining. Operations absent from these tables don't
+support SQL generation.</p>
+
+
+<div class="tablenoborder"><table summary="" class="defaultstyle"><caption><span class="tablecap">Table 1. Operators</span></caption><colgroup><col style="width:33.08270676691729%"><col style="width:66.9172932330827%"></colgroup><thead style="text-align:left;">
+<tr>
+<th id="sql_clem__entry__1">Operations supporting SQL generation</th>
+
+<th id="sql_clem__entry__2">Notes</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="sql_clem__entry__1 "><code class="ph codeph">+</code></td>
+
+<td headers="sql_clem__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__entry__1 "><code class="ph codeph">-</code></td>
+
+<td headers="sql_clem__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__entry__1 "><code class="ph codeph">/</code></td>
+
+<td headers="sql_clem__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__entry__1 "><code class="ph codeph">*</code></td>
+
+<td headers="sql_clem__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__entry__1 "><code class="ph codeph">&gt;&lt;</code></td>
+
+<td headers="sql_clem__entry__2 ">Used to concatenate strings.</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<div class="tablenoborder"><table summary="" id="sql_clem__table_uqw_jk1_2db" class="defaultstyle"><caption><span class="tablecap">Table 2. Relational
+operators</span></caption><colgroup><col style="width:33.08270676691729%"><col style="width:66.9172932330827%"></colgroup><thead style="text-align:left;">
+<tr>
+<th id="sql_clem__table_uqw_jk1_2db__entry__1">Operations supporting SQL generation</th>
+
+<th id="sql_clem__table_uqw_jk1_2db__entry__2">Notes</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="sql_clem__table_uqw_jk1_2db__entry__1 "><code class="ph codeph">=</code>
+</td>
+
+<td headers="sql_clem__table_uqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_uqw_jk1_2db__entry__1 "><code class="ph codeph">/=</code></td>
+
+<td headers="sql_clem__table_uqw_jk1_2db__entry__2 ">Used to specify "not equal."</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_uqw_jk1_2db__entry__1 "><code class="ph codeph">&gt;</code></td>
+
+<td headers="sql_clem__table_uqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_uqw_jk1_2db__entry__1 "><code class="ph codeph">&gt;=</code></td>
+
+<td headers="sql_clem__table_uqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_uqw_jk1_2db__entry__1 "><code class="ph codeph">&lt;</code></td>
+
+<td headers="sql_clem__table_uqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_uqw_jk1_2db__entry__1 "><code class="ph codeph">&lt;=</code></td>
+
+<td headers="sql_clem__table_uqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<div class="tablenoborder"><table summary="" id="sql_clem__table_wqw_jk1_2db" class="defaultstyle"><caption><span class="tablecap">Table 3. Functions</span></caption><colgroup><col style="width:33.08270676691729%"><col style="width:66.9172932330827%"></colgroup><thead style="text-align:left;">
+<tr>
+<th id="sql_clem__table_wqw_jk1_2db__entry__1">Operations supporting SQL generation</th>
+
+<th id="sql_clem__table_wqw_jk1_2db__entry__2">Notes</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">abs</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">allbutfirst</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">allbutlast</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">and</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">arccos</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">arcsin</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">arctan</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">arctanh</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">cos</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">div</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">exp</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">fracof</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">hasstartstring</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">hassubstring</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">integer</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">intof</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">isaplhacode</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">islowercode</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">isnumbercode</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">isstartstring</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">issubstring</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">isuppercode</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">last</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">length</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">locchar</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">log</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">log10</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">lowertoupper</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">max</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">member</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">min</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">negate</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">not</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">number</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">or</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">pi</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">real</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">rem</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">round</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">sign</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">sin</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">sqrt</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">string</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">strmember</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">subscrs</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">substring</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">substring_between</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">uppertolower</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_wqw_jk1_2db__entry__1 ">
+<code class="ph codeph">to_string</code>
+</td>
+
+<td headers="sql_clem__table_wqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<div class="tablenoborder"><table summary="" id="sql_clem__table_yqw_jk1_2db" class="defaultstyle"><caption><span class="tablecap">Table 4. Special
+functions</span></caption><colgroup><col style="width:33.08270676691729%"><col style="width:66.9172932330827%"></colgroup><thead style="text-align:left;">
+<tr>
+<th id="sql_clem__table_yqw_jk1_2db__entry__1">Operations supporting SQL generation</th>
+
+<th id="sql_clem__table_yqw_jk1_2db__entry__2">Notes</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@NULL</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@GLOBAL_AVE</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">You can use the special global functions to retrieve global values computed by the Set
+Globals node.</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@GLOBAL_SUM</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@GLOBAL_MAX</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@GLOBAL_MEAN</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@GLOBAL_MIN</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_yqw_jk1_2db__entry__1 ">
+<code class="ph codeph">@GLOBALSDEV</code>
+</td>
+
+<td headers="sql_clem__table_yqw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<div class="tablenoborder"><table summary="" id="sql_clem__table_arw_jk1_2db" class="defaultstyle"><caption><span class="tablecap">Table 5. Aggregate
+functions</span></caption><colgroup><col style="width:33.08270676691729%"><col style="width:66.9172932330827%"></colgroup><thead style="text-align:left;">
+<tr>
+<th id="sql_clem__table_arw_jk1_2db__entry__1">Operations supporting SQL generation</th>
+
+<th id="sql_clem__table_arw_jk1_2db__entry__2">Notes</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="sql_clem__table_arw_jk1_2db__entry__1 ">
+<code class="ph codeph">Sum</code>
+</td>
+
+<td headers="sql_clem__table_arw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_arw_jk1_2db__entry__1 ">
+<code class="ph codeph">Mean</code>
+</td>
+
+<td headers="sql_clem__table_arw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_arw_jk1_2db__entry__1 ">
+<code class="ph codeph">Min</code>
+</td>
+
+<td headers="sql_clem__table_arw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_arw_jk1_2db__entry__1 ">
+<code class="ph codeph">Max</code>
+</td>
+
+<td headers="sql_clem__table_arw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_arw_jk1_2db__entry__1 ">
+<code class="ph codeph">Count</code>
+</td>
+
+<td headers="sql_clem__table_arw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+<tr>
+<td headers="sql_clem__table_arw_jk1_2db__entry__1 ">
+<code class="ph codeph">SDev</code>
+</td>
+
+<td headers="sql_clem__table_arw_jk1_2db__entry__2 ">&nbsp;</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+</div>
+
+<aside role="complementary" aria-labelledby="sql_clem__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="sql_overview.html" title="You can push many data preparation and mining operations directly in your database to improve performance.">SQL optimization</a></div>
+</div>
+</nav></aside></article></main></body></html>

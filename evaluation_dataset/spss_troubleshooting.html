@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="Use this information to resolve questions or issues that you have with SPSS Modeler.">
+<meta name="keywords" content="SPSS Modeler, troubleshooting">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="reference_guides.html">
+<title>Troubleshooting information for SPSS Modeler</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/spss_troubleshooting.html">
+</head>
+<body id="spss_tips"><main role="main"><article role="article" aria-labelledby="spss_tips__title__1">
+<h1 class="topictitle1" id="spss_tips__title__1">Troubleshooting <span class="keyword">SPSS Modeler</span></h1>
+
+
+
+
+<div class="body"><p class="shortdesc">Use this information to resolve questions or issues that you have with <span class="keyword">SPSS Modeler</span>.</p>
+
+        <ul data-hd-audience="cloud wx">
+            <li><a href="#spss_tips__MultipleFlows">Running multiple flows</a></li>
+
+            <li><a href="#spss_tips__ExecutionInterrupt">Execution interrupted</a></li>
+
+            <li><a href="#spss_tips__folderError">File does not exist</a></li>
+
+            <li><a href="#spss_tips__SAVFile">Cannot export data to SPSS Statistics .sav file</a></li>
+
+            <li><a href="#spss_tips__UnnamedFields">Unnamed fields in migrated streams</a></li>
+
+            <li><a href="#spss_tips__KDEnodes">KDE nodes with unsupported Python version</a></li>
+
+            <li><a href="#spss_tips__LineSep">Differences in how having no line separators is handled</a></li>
+
+            <li><a href="#spss_tips__Predictor">Values for Predictor Importance can vary between SPSS Modeler flows and SPSS Modeler desktop streams</a></li>
+
+            <li><a href="#spss_tips__TAdiff">It's hard to tell the difference between models generated from Text Analytics</a></li>
+
+            <li><a href="#spss_tips__SCAPIerror">Internal error occurred: SCAPI error: The value on row 1,029 is not a valid string</a></li>
+
+        </ul>
+
+<section class="section" role="region" aria-labelledby="spss_tips__MultipleFlows__title__1" id="spss_tips__MultipleFlows"><h2 class="sectiontitle" id="spss_tips__MultipleFlows__title__1">Running multiple flows</h2>
+            
+            
+            <p>Avoid running multiple flows that use the same username under one project at the same
+time. If you must run multiple flows, be sure the memory limit (8 GiB, by default) is not exceeded.
+If too many flows are running at the same time under the same username and project, <span class="keyword">SPSS Modeler</span> might run out of memory and return an error message, such as
+<span class="ph uicontrol">Execution was interrupted</span>. </p>
+
+            <p>If you get this error message, complete the following steps:</p>
+
+<ol>
+<li>Wait for the completion of one or more flow runs.</li>
+
+<li>Close any of your browser tabs that contain successfully-completed flow runs.</li>
+
+<li>Wait for 15 minutes.</li>
+
+<li>If you use caching in your flow, flush the cache.</li>
+
+<li>Click <span class="ph uicontrol">Run</span> on the interrupted flow that returned an error.</li>
+
+</ol>
+
+        </section>
+
+        <section class="section" role="region" aria-labelledby="spss_tips__ExecutionInterrupt__title__1" id="spss_tips__ExecutionInterrupt"><h2 class="sectiontitle" id="spss_tips__ExecutionInterrupt__title__1">Execution interrupted</h2>
+            
+            
+            <p>If an <span class="keyword">SPSS Modeler</span> flow becomes unresponsive or gives an
+                error message such as <code class="ph codeph">Execution was interrupted</code>, you can try
+                restarting the session. While in the <span class="keyword">SPSS Modeler</span> flow,
+                complete the following steps:</p>
+
+            <ol>
+                <li>Click <span class="ph uicontrol">Flow information</span>.</li>
+
+                <li>Click <span class="ph uicontrol">Restart session</span>.</li>
+
+            </ol>
+
+        </section>
+
+        <section class="section" role="region" aria-labelledby="spss_tips__folderError__title__1" id="spss_tips__folderError"><h2 class="sectiontitle" id="spss_tips__folderError__title__1">File does not exist</h2>
+            
+            
+            <p>If you renamed a file or moved a file from the project to a folder, you might receive
+                this error message when you run an <span class="keyword">SPSS Modeler</span>
+                flow:</p>
+
+            <p><samp class="ph msgph">WDP Connector Error: CDICO2015E: The <var class="keyword varname">filepath/content.csv</var>
+                    file does not exist or you do not have sufficient permissions.</samp></p>
+
+            <p>This error occurs because the flow has not updated the name or location of the file.
+                To fix the error, you can restart the session to update the <span class="keyword">SPSS Modeler</span> flow:</p>
+
+            <ol>
+                <li>Click <span class="ph uicontrol">Flow information</span>.</li>
+
+                <li>Click <span class="ph uicontrol">Restart session</span>.</li>
+
+            </ol>
+
+            <p>You can also restart the runtime to fix the issue.</p>
+
+        </section>
+
+        <section class="section" role="region" aria-labelledby="spss_tips__SAVFile__title__1" id="spss_tips__SAVFile"><h2 class="sectiontitle" id="spss_tips__SAVFile__title__1">Cannot export data to SPSS Statistics <span class="ph filepath">.sav</span> file</h2>
+            
+            <p>You tried to use a <span class="ph uicontrol">Data Asset Export</span> node to export data to an
+                SPSS Statistics <span class="ph filepath">.sav</span> file, but the file was not created. You
+                also received this error message: </p>
+
+            <p><samp class="ph msgph">WDP Connector Error: CDICO9999E: Internal error occurred: IO error: Invalid
+                    variable name error: Invalid character found in field name 'AGE YOUN'. Field
+                    names can only include any letter, any digit or the symbols @, #, ., _, or $ for
+                    export.</samp></p>
+
+            <p>Check whether any field names contain spaces. The <span class="ph filepath">.sav</span> file
+                format does not support spaces in field names.</p>
+
+        </section>
+
+<section class="section" role="region" aria-labelledby="spss_tips__UnnamedFields__title__1" id="spss_tips__UnnamedFields"><h2 class="sectiontitle" id="spss_tips__UnnamedFields__title__1">Unnamed fields in migrated streams</h2>
+            
+            
+            <p>By default, unnamed data fields in <span class="keyword">SPSS Modeler</span> desktop
+are named <code class="ph codeph">field1</code>, <code class="ph codeph">field2</code>, <code class="ph codeph">field3</code>, and so on. In
+<span class="keyword">SPSS Modeler</span> in <span class="keyword" data-hd-audience="wx opx" translate="no">watsonx.ai</span>, unnamed data fields are named
+<code class="ph codeph">COLUMN1</code>, <code class="ph codeph">COLUMN2</code>, <code class="ph codeph">COLUMN3</code>, and so on. If you
+create a flow from a stream file (<span class="ph filepath">.str</span>) that was created in <span class="keyword">SPSS Modeler</span> desktop and it contains such fields, the output is different.</p>
+
+            <div class="p">As a workaround, you can add a script such as the following to the flow that you
+created from the imported
+stream:<pre class="codeblock language-shell"><code class="language-shell"># TO DO: run this script once after importing the stream into CP4D 
+import modeler.api
+stream = modeler.script.stream()
+
+# map "COLUMN" to "field" for data sources without field names (csv without headers)
+source_node = stream.findByID("...") # TO DO: provide ID of existing source node (csv file without headers)
+filter_node = stream.findByID("...") # TO DO: provide ID of existing filter node (where field names are provided) 
+new_node = stream.create("filter", 'new node') # creates new filter node between source and filter
+stream.linkBetween(new_node, source_node, filter_node)
+
+# change field names from "COLUMN1" to "field1" etc. 
+for number in range(1,1000): # change max value if necessary
+    old_name = 'COLUMN' + str(number)
+    new_name = 'field' + str(number)
+    new_node.setKeyedPropertyValue("new_name", old_name, new_name)</code></pre></div>
+
+        </section>
+
+<section class="section" role="region" aria-labelledby="spss_tips__KDEnodes__title__1" id="spss_tips__KDEnodes"><h2 class="sectiontitle" id="spss_tips__KDEnodes__title__1">KDE nodes with unsupported Python version</h2>
+            
+            
+            <p>If you run a flow that contains an old KDE node, you might receive an error. The
+                error says that the model uses a Python package that is no longer supported. In such
+                a case, remove the old KDE node and add a new one.</p>
+
+        </section>
+
+<section class="section" role="region" aria-labelledby="spss_tips__LineSep__title__1" id="spss_tips__LineSep"><h2 class="sectiontitle" id="spss_tips__LineSep__title__1">Differences in how having no line separators is handled</h2>
+            
+            
+            <p>If a line of a data record does not have a separator, that line is discarded in
+                    <span class="keyword" data-hd-audience="wx opx" translate="no">watsonx.ai</span>.</p>
+
+        </section>
+
+<section class="section" role="region" aria-labelledby="spss_tips__Predictor__title__1" id="spss_tips__Predictor"><h2 class="sectiontitle" id="spss_tips__Predictor__title__1">Values for Predictor Importance can vary between SPSS Modeler flows and SPSS
+                Modeler desktop streams</h2>
+            
+            
+            <p>To avoid inconsistent results on different platforms, a new random sampling method is
+                used to compute Predictor Importance in <span class="keyword">SPSS Modeler</span> on
+                    <span class="keyword" data-hd-audience="wx opx" translate="no">watsonx.ai</span>. This causes new
+                Predictive Importance results to vary from the original Predictive Importance
+                results in <span class="keyword">SPSS Modeler</span> desktop if the data is not
+                uniformly distributed. Random sampling is triggered when the number of records
+                exceeds 200. <span class="keyword">SPSS Modeler</span> desktop will be upgraded in a
+                future version to match the results in <span class="keyword">SPSS Modeler</span> on
+                    <span class="keyword" data-hd-audience="wx opx" translate="no">watsonx.ai</span>.</p>
+
+        </section>
+
+<section class="section" role="region" aria-labelledby="spss_tips__TAdiff__title__1" id="spss_tips__TAdiff"><h2 class="sectiontitle" id="spss_tips__TAdiff__title__1">It's hard to tell the difference between models generated from Text
+                Analytics</h2>
+            
+            
+            <p>In the Text Analytics Workbench, each time that you click <span class="ph uicontrol">Generate new
+                    model</span>, a new model nugget is created in your flow. If you generate
+                multiple models, they all have the same name, so it can be difficult to
+                differentiate them. One recommendation is to use annotations to help identify them
+                (double-click a model nugget to open its properties, then go to
+                    <span class="ph uicontrol">Annotations</span>).</p>
+
+        </section>
+
+
+<section class="section" role="region" aria-labelledby="spss_tips__SCAPIerror__title__1" id="spss_tips__SCAPIerror"><h2 class="sectiontitle" id="spss_tips__SCAPIerror__title__1">Internal error occurred: SCAPI error: The value on row 1,029 is not a valid
+                string</h2>
+            
+            <p>For example, while <span class="keyword">SPSS Modeler</span> is reading a data set in
+                the <span class="ph uicontrol">Data Asset</span> node, the following error occurs:</p>
+
+            <p><samp class="ph msgph">Internal error occurred: SCAPI error: The value on row 1,029 is not a valid
+                    string of the Bit data type for the SecurityDelay column.</samp></p>
+
+            <p>This behavior is expected. For most flat files, <span class="keyword">SPSS Modeler</span> reads the 1st 1000 records to infer the data
+                type. In this case, the 1st 1000 rows were 0's or 1's, so <span class="keyword">SPSS Modeler</span> inferred that the column contained binary values
+                (0 or 1). The value at row 1,029 was 3. When <span class="keyword">SPSS Modeler</span> read a value of 3 at row 1,029, it causes an error, as 3 is not a binary
+                value.</p>
+
+            <p>Suggested workarounds:</p>
+
+            <ul>
+                <li>Adjust the <span class="ph uicontrol">Infer record count</span> parameter to include more
+                    data, choosing 2000 rows instead (or more).</li>
+
+                <li>If this problem comes from an error in the data, update any value in the first
+                    1000 rows that is causing the error.</li>
+
+            </ul>
+
+        </section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="spss_tips__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="reference_guides.html" title="This section provides reference information about various topics.">Reference information</a></div>
+</div>
+</nav></aside></article></main></body></html>
