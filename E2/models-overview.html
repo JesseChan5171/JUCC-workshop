@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="In SPSS Modeler, you set up flows to process data and experiment with different modeling techniques. Through the modeling process, you create tuned model that you can use for predictive analytics.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="spss-modeler.html">
+<title>Building flows and models</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/models-overview.html">
+</head>
+<body id="modelss-overview"><main role="main"><article role="article" aria-labelledby="modelss-overview__title__1">
+    <h1 class="topictitle1" id="modelss-overview__title__1">Building flows and models</h1>
+
+    
+    <div class="body conbody"><p class="shortdesc">In <span class="keyword">SPSS Modeler</span>, you set up flows to process data and
+        experiment with different modeling techniques. Through the modeling process, you create
+        tuned model that you can use for predictive analytics.</p>
+
+        <section class="section" role="region" aria-labelledby="modelss-overview__title__2"><h2 class="sectiontitle" id="modelss-overview__title__2">Building flows</h2>
+            
+            <p>A flow is a series of nodes that you connect on the canvas.</p>
+
+            <dl>
+                
+                    <dt class="dlterm">Flow</dt>
+
+                    <dd class="dlentry">A flow is a group of data-processing operations that are connected in
+                        sequences. Flows represent the flow of data through each operation. Data
+                        flows from the data source through the sequence of operations to the end.
+                        Usually, a flow ends in a model or type of data output, such as a table or
+                            chart.<p>Flows are created by adding nodes on to the canvas and
+                            connecting them.</p>
+</dd>
+
+                
+            </dl>
+
+            <dl>
+                
+                    <dt class="dlterm">Canvas</dt>
+
+                    <dd class="dlentry">The canvas is the main work area in <span class="keyword">SPSS Modeler</span>, and it is where you build your flows.</dd>
+
+                
+                
+                    <dt class="dlterm">Nodes</dt>
+
+                    <dd class="dlentry">A node is a modular, self-contained set of operations. Nodes are a graphical
+                        way of representing these operations, and each node has a unique icon. These
+                        nodes can be linked together on the canvas in a flow for more complex data
+                        processing. </dd>
+
+                
+            </dl>
+
+            <p>You can add modeling nodes to your flow. Each of the modeling nodes is a different
+                modeling technique. You can add several modeling nodes to your flow to try
+                different modeling techniques with your data. After you finish setting up your
+                flow, you can run it so that your data is processed and the analyzed by the
+                modeling nodes.</p>
+
+            
+            
+        </section>
+
+        <section class="section" role="region" aria-labelledby="modelss-overview__title_qqb_jdn_zcb__title__1" id="modelss-overview__title_qqb_jdn_zcb"><h2 class="sectiontitle" id="modelss-overview__title_qqb_jdn_zcb__title__1">The modeling process</h2>
+            
+            <p>The ability to predict an outcome is the central goal of predictive analytics, and
+                understanding the modeling process is the key to using <span class="keyword">SPSS Modeler</span>.</p>
+
+            <p>A model is a set of rules, formulas, or equations that can be used to predict an
+                outcome based on a set of input fields or variables from your data.  For example, a
+                financial institution might use a model to predict whether loan applicants are
+                likely to be good or bad risks, based on information that is already known about
+                past applicants. A tuned model is one of the objectives of working in <span class="keyword">SPSS Modeler</span>.</p>
+
+            <p>Modeling is conducted in multiple iterations. Typically, you might run several
+                modeling nodes that use the default parameters. You can then fine-tune the
+                parameters for the modeling node, or you might return to the data preparation phase
+                to adjust the data for the modeling node.</p>
+
+            <p><span class="keyword">SPSS Modeler</span> offers various modeling methods that are
+                taken from machine learning, artificial intelligence, and statistics. You can use
+                the methods available on the node palette to derive new information from your data
+                and to develop predictive models. Each method has certain strengths and is best
+                suited for particular types of problems.</p>
+
+            <p>If you get promising results from one of these modeling nodes, then you can save the
+                modeling node as a model. This model can then be promoted and deployed for use in
+                real-time predictive analysis.</p>
+
+        </section>
+
+        <section class="section" role="region" aria-labelledby="modelss-overview__title__4"><h2 class="sectiontitle" id="modelss-overview__title__4">Nodes palette</h2>
+            
+            <p>The nodes palette has all the nodes that are available in <span class="keyword">SPSS Modeler</span>. They are organized into groups based on their
+                function. You can add any node in the nodes palette to your flow.</p>
+
+            <p>For more information about the nodes palette, see <a href="nodes/_nodes.html" title="The following sections describe all the nodes available on the palette in SPSS Modeler. Drag-and-drop or double-click a node in the list to add it to your flow canvas. You can then double-click any node icon in your flow to set its properties. Hover over a property to see information about it, or click the information icon to see Help.">Nodes palette</a>.</p>
+
+            
+        </section>
+
+        <section class="section" role="region" aria-labelledby="modelss-overview__title__5"><h2 class="sectiontitle" id="modelss-overview__title__5">SuperNodes</h2>
+            
+            <p>You can save all or part of your flow as a SuperNode. This SuperNode can then be used
+                just like a node in other flows. You can use a SuperNode to add complex layers of
+                processing to a flow without adding a long sequence of nodes that can clutter your
+                canvas.</p>
+
+            <p>For more information about SuperNodes, see <a href="nodes/supernodes.html" title="One of the reasons the SPSS Modeler visual interface is so easy to learn is that each node has a clearly defined function. However, for complex processing, a long sequence of nodes may be necessary. Eventually, this may clutter your flow canvas and make it difficult to follow flow diagrams.">SuperNodes</a>.</p>
+
+        </section>
+
+    </div>
+
+<aside role="complementary" aria-labelledby="modelss-overview__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="nodes/nodes_cache_disable.html">Disabling or caching nodes in a flow</a></strong><br>
+You can disable a node so it's ignored when the flow runs. And you can set up a cache on a node.</li>
+<li class="ulchildlink"><strong><a href="spss-comments.html">Adding comments and annotations</a></strong><br>
+If you need to document your flows, you can attach explanatory comments to nodes and model nuggets. These comments can help describe the flow to others in your organization.</li>
+<li class="ulchildlink"><strong><a href="flow_properties.html">Setting properties for flows</a></strong><br>
+You can specify properties to apply to the current flow.</li>
+<li class="ulchildlink"><strong><a href="dataview.html">Chart builder</a></strong><br>
+You can use a Charts node to start the chart builder. In the chart builder, you can use advanced visualizations to explore your data from different perspectives and identify patterns, connections, and relationships within your data.</li>
+<li class="ulchildlink"><strong><a href="flow_scripting.html">Flow scripting</a></strong><br>
+You can use scripts to customize operations within a particular flow, and they're saved   with that flow. For example, you might use a script to specify a particular run order for terminal   nodes. You use the flow properties page to edit the script that is saved with the current flow. </li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="spss-modeler.html" title="SPSS Modeler offers modeling algorithms that are taken from machine learning, artificial intelligence, and statistics. You can use these modeling algorithms to analyze your data and gain new business insights. With SPSS Modeler, you can quickly develop predictive models and deploy them into business operations.">Creating SPSS Modeler flows</a></div>
+</div>
+</nav></aside></article></main></body></html>

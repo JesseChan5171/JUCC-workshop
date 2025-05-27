@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="Parameters are user-defined variables that are saved and persisted with the current flow or SuperNode. Parameters are often used in scripting to control the behavior of the script, and they can be accessed from the user interface as well.">
+<meta name="keywords" content="parameters, flow parameters, SuperNode parameters">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="flow_scripting.html">
+<title>Flow and SuperNode parameters</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/parameters.html">
+</head>
+<body id="parameters"><main role="main"><article role="article" aria-labelledby="parameters__title__1">
+<h1 class="topictitle1" id="parameters__title__1">Flow and SuperNode parameters</h1>
+
+
+
+<div class="body"><p class="shortdesc"><span class="ph" id="shortdesc_parameter">Parameters are user-defined variables that are saved and
+   persisted with the current flow or SuperNode. Parameters are often used in scripting to control
+   the behavior of the script, and they can be accessed from the user interface as
+  well.</span></p>
+
+  
+  <p><span class="ph" id="parameters__ph_parameterCLEM">You can define parameters for use in CLEM expressions and in
+    scripting. Parameters that are defined in the flow properties are available to all nodes in the
+    flow.</span> This availability of parameters distinguishes them from local script variables, which
+   can be used only in the script in which they are declared.</p>
+
+  <p><span class="ph" id="parameters__ph_parameterSaves">If you save a flow, any parameters set for that flow are also
+    saved.</span></p>
+
+  <p>You can set flow parameters in a flow script or the flow properties. For more information about
+   setting flow properties, see <a href="flow_properties.html">Setting properties
+    for flows</a></p>
+
+  <section class="section" role="region" aria-labelledby="parameters__title__2"><h2 class="sectiontitle" id="parameters__title__2">Parameters in CLEM expressions</h2>
+   
+   <p>Parameters are represented in CLEM expressions by <code class="ph codeph">$P-pname</code>, where
+     <code class="ph codeph">pname</code> is the name of the parameter. When used in CLEM expressions, parameters
+    must be placed within single quotation marks, for example, <code class="ph codeph">'$P-scale'</code>. </p>
+
+   
+   
+   
+  </section>
+
+  <section class="section" role="region" aria-labelledby="parameters__title__3"><h2 class="sectiontitle" id="parameters__title__3">Parameters in scripting</h2>
+   
+   <p>You can provide information for fields and values by using a parameter so that you don't need
+    to hardcode values in the script. For example, you can create a <code class="ph codeph">minvalue</code>
+    parameter, and then you can use this parameter for different operations in the current flow,
+    such as selecting records higher or lower than this threshold. And you can change the value for
+    the threshold as you need.</p>
+
+   <div class="note tip"><span class="tiptitle">Tip:</span> For more information about scripting, see the <a href="nodes/scripting_guide/clementine/scripting_overview.html">Scripting and
+          automation</a> guide.</div>
+
+  </section>
+
+  <section class="section" role="region" aria-labelledby="parameters__title__4"><h2 class="sectiontitle" id="parameters__title__4">Parameters in SuperNodes</h2>
+   
+   <p>Any parameters set for a SuperNode are available when you build CLEM expressions in that
+    SuperNode or any nested nodes. <span class="ph" id="parameters__ph_parameterSupernode">Parameters set for a SuperNode are
+     not available outside of the SuperNode.</span></p>
+
+   <p>You can use parameters to manage the settings for nodes within a SuperNode. This method saves
+        time as you don't need to configure nodes directly. For example, you want to train a
+          <span class="ph uicontrol">Neural Net</span> node within a SuperNode for a specific length of time by
+        using a random sample of the data available in a <span class="ph uicontrol">Sample</span> node. You can
+        use parameters to specify values for the length of time and the percentage sample. You can
+        customize the properties for the nodes so that the <span class="ph uicontrol">Sample</span> setting is
+          <span class="ph uicontrol">Random %</span> in the <span class="ph uicontrol">Sample</span> node and the
+          <span class="ph uicontrol">Stopping Rules</span> setting is <span class="ph uicontrol">Use maximum training
+          time</span> in the <span class="ph uicontrol">Neural Net</span> node. You can then create
+        parameters for the SuperNode, such as <code class="ph codeph">Train.time</code> and
+          <code class="ph codeph">Sample.random</code>, to access the node properties and specify values. Once you
+        define these parameters, you can easily modify values for these settings in the two nodes by
+        setting the values for the parameters in the SuperNode. </p>
+
+  </section>
+
+ </div>
+
+<aside role="complementary" aria-labelledby="parameters__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="flow_scripting.html" title="You can use scripts to customize operations within a particular flow, and they're saved with that flow. For example, you might use a script to specify a particular run order for terminal nodes. You use the flow properties page to edit the script that is saved with the current flow.">Flow scripting</a></div>
+</div>
+</nav></aside></article></main></body></html>

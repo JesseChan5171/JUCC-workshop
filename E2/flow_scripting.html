@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="You can use scripts to customize operations within a particular flow, and they're saved with that flow. For example, you might use a script to specify a particular run order for terminal nodes. You use the flow properties page to edit the script that is saved with the current flow.">
+<meta name="keywords" content="scripting, flows, scripts">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="models-overview.html">
+<title>Flow scripting (SPSS Modeler)</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/flow_scripting.html">
+</head>
+<body id="flow_scripting"><main role="main"><article role="article" aria-labelledby="flow_scripting__title__1">
+<h1 class="topictitle1" id="flow_scripting__title__1">Flow scripting</h1>
+
+
+
+
+<div class="body"><p class="shortdesc">You can use scripts to customize operations within a particular flow, and they're saved
+  with that flow. For example, you might use a script to specify a particular run order for terminal
+  nodes. You use the flow properties page to edit the script that is saved with the current flow. </p>
+
+<p>To access scripting in a flow's properties, click <span class="ph uicontrol">Scripting</span> in the
+   toolbar.</p>
+
+<div class="note note"><span class="notetitle">Tips:</span> 
+<ul>
+<li>By default, the Python scripting language is used. If you want to use a scripting language
+     unique to old versions of <span class="keyword">SPSS Modeler</span> desktop, select
+      <span class="ph uicontrol">Legacy</span>.</li>
+
+<li>For more information about scripting, see the <a href="nodes/scripting_guide/clementine/scripting_overview.html">Scripting and
+      automation</a> guide. </li>
+
+</ul>
+
+</div>
+
+<p>You can specify whether the script runs when the flow runs. To run the script each time the flow
+   runs, respecting the run order of the script, select <span class="ph uicontrol">Run the script</span>. This
+   setting provides automation at the flow level for quicker model building. Or, to ignore the
+   script, you can select <span class="ph uicontrol">Run all terminal nodes</span> when the flow runs.</p>
+
+<p>The script editor includes the following features that help with script authoring:</p>
+
+<ul>
+<li>Syntax highlighting that highlights keywords, literal values (such as strings and numbers), and
+    comments</li>
+
+<li>Line numbering</li>
+
+<li>Block matching that highlights the corresponding end block when you place your cursor near the
+    start of a program block</li>
+
+<li>Suggested auto-completion</li>
+
+</ul>
+
+<p>A list of suggested syntax completions can be accessed by selecting
+    <span class="ph uicontrol">Auto-Suggest</span> from the menu, or pressing Ctrl + Space. Use the cursor keys
+   to move up and down the list, then press Enter to insert the selected text. To exit from
+   auto-suggest mode without modifying the existing text, press Esc.</p>
+
+        <section class="section" role="region" aria-labelledby="flow_scripting__title__2"><h2 class="sectiontitle" id="flow_scripting__title__2">Messages</h2>
+            
+            <p>Messages contain updates about system information that are generated as <span class="keyword">SPSS Modeler</span> runs. You can view messages about flow
+                operations, such as running, optimization, scripts, and time elapsed for model
+                building and evaluation. Error messages are also reported here.</p>
+
+        </section>
+
+
+
+</div>
+
+<aside role="complementary" aria-labelledby="flow_scripting__title__1"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="flow_scripting_example.html">Flow scripting example</a></strong><br>
+You can use a flow to train a model when it runs. Normally, to test the model, you might run the modeling node to add the model to the flow, make the appropriate connections, and run an Analysis node. </li>
+<li class="ulchildlink"><strong><a href="parameters.html">Flow and SuperNode parameters</a></strong><br>
+<span class="ph">Parameters are user-defined variables that are saved and    persisted with the current flow or SuperNode. Parameters are often used in scripting to control    the behavior of the script, and they can be accessed from the user interface as   well.</span></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="models-overview.html" title="In SPSS Modeler, you set up flows to process data and experiment with different modeling techniques. Through the modeling process, you create tuned model that you can use for predictive analytics.">Building flows and models</a></div>
+</div>
+</nav></aside></article></main></body></html>

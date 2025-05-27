@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2025">
+
+
+
+<meta name="description" content="You can promote SPSS Modeler flows and models to watsonx.ai Runtime if you have the watsonx.ai Runtime service.">
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<link rel="Start" href="spss-modeler.html">
+<title>Promoting and running SPSS Modeler models and flows in watsonx.ai Runtime</title>
+<link rel="canonical" href="https://www.ibm.com/docs/SSYOK8/wsd/save_model.html">
+</head>
+<body id="save_model"><main role="main"><article role="article" aria-labelledby="save_model__title__1">
+<h1 class="topictitle1" id="save_model__title__1">Promoting <span class="keyword">SPSS Modeler</span> flows and models</h1>
+
+
+
+
+
+<div class="body conbody"><p class="shortdesc">You can promote <span class="keyword">SPSS Modeler</span> flows and models to <span class="keyword" data-hd-audience="cloud wx" translate="no">watsonx.ai Runtime</span> if you have the <span class="keyword" data-hd-audience="cloud wx" translate="no">watsonx.ai Runtime</span> service.</p>
+
+<p>After you build a model, you need to publish it or the flow that it is in so that others can
+access the model. Users, developers, or systems can access the model in the deployment space and use
+it to analyze data or make predictions.</p>
+
+<p>In <span class="keyword" data-hd-audience="cloud wx" translate="no">watsonx.ai Runtime</span>, you add your flows and models to
+a deployment space, where you can test and manage them. In a deployment space, you can prepare your
+flows and models for use in pre-production or production environments to generate predictions and
+insights. </p>
+
+<p>Deploying models and flows has these benefits. </p>
+
+<dl>
+
+<dt class="dlterm">Real-time Insights</dt>
+
+<dd class="dlentry">Deployed models can provide real-time predictions or insights. Real-time data enables faster
+decision-making and more efficient operations.</dd>
+
+
+
+<dt class="dlterm">Scalability</dt>
+
+<dd class="dlentry">Deployed models can scale to handle increasing amounts of data and demand so that they maintain
+their performance as your business grows.</dd>
+
+
+
+<dt class="dlterm">Integration</dt>
+
+<dd class="dlentry">Deployed models can be integrated with other systems and applications. For example, you can use
+API end points to enable integration.</dd>
+
+
+
+<dt class="dlterm">Security</dt>
+
+<dd class="dlentry">Deployed models can be secured by using access controls, encryption, and other best practices.
+Security measures ensure that sensitive data remains protected.</dd>
+
+
+
+<dt class="dlterm">Maintainability</dt>
+
+<dd class="dlentry">Deployed models can be updated and maintained. You can update models as needed so that they
+remain accurate and relevant over time.</dd>
+
+
+</dl>
+
+<section class="section" role="region" aria-labelledby="save_model__title__2"><h2 class="sectiontitle" id="save_model__title__2">Models in deployment spaces</h2>
+
+<p>Models can be saved as either a scoring branch or as predictive model markup language (PMML).
+PMML is an XML format for describing data mining and statistical models. It includes inputs to the
+models, transformations that are used to prepare data for data mining, and the parameters that
+define the models themselves. If you save models as PMML, it is possible to share models with other
+applications that support this format. For more information about PMML, see the <a href="http://www.dmg.org" rel="noopener" target="_blank" title="(Opens in a new tab or window)">Data Mining Group website</a>.</p>
+
+<p>Models can be deployed in either online or batch deployments. For more information about
+deployments, see <a href="../wsj/analyze-data/deploy-online.html">Creating online deployments</a> and <a href="../wsj/analyze-data/deploy-batch-details.html">Creating batch deployments</a>.</p>
+
+</section>
+
+<section class="section" role="region" aria-labelledby="save_model__title__3"><h2 class="sectiontitle" id="save_model__title__3">Flows in deployment spaces</h2>
+
+<p>Flows can be deployed only in batch deployments. For flows in a deployment space, you can decide
+which terminal nodes to run in the flow each time that you create a batch job from the flow. You can
+use this flexibility to run the whole flow or only a few nodes from it. You do not need to deploy
+the flow in the deployment space to create batch jobs. </p>
+
+<p>For more information about creating batch jobs for flows in deployment spaces, see <a href="../wsj/analyze-data/create-jobs-spss-flows.html">Creating jobs in
+deployment spaces for <span class="keyword">SPSS Modeler</span> flows</a>.</p>
+
+</section>
+
+<section class="section" role="region" aria-labelledby="save_model__title__4"><h2 class="sectiontitle" id="save_model__title__4">Promoting <span class="keyword">SPSS Modeler</span> models and flows to <span class="keyword" data-hd-audience="cloud wx" translate="no">watsonx.ai Runtime</span></h2>
+
+<p>You can promote any model or flow to a deployment space if it is saved as a project asset.</p>
+
+<ol>
+<li>If you want to promote a model, you need to save it to the project before you can promote it:<ol type="a">
+<li>In your <span class="keyword">SPSS Modeler</span> flow, click the <span class="ph uicontrol">Save
+Model</span> icon on the toolbar.</li>
+
+<li>In <span class="ph uicontrol">Branch terminal node</span>, select the node that you want to make into a
+model.</li>
+
+<li>Enter a name and click <span class="ph uicontrol">Save</span> to save the model to as a project asset.</li>
+
+</ol>
+</li>
+
+<li>Promote the flow or model:<ol type="a">
+<li>Click the <span class="ph uicontrol">Assets</span> tab and find the model or flow. Click the overflow menu
+<img src="images/actions.png" alt=""> and select <span class="ph uicontrol">Promote to
+space</span>.</li>
+
+<li>In <span class="ph uicontrol">Target space</span>, select the deployment space. Click
+<span class="ph uicontrol">Promote</span>.</li>
+
+</ol>
+</li>
+
+<li>If the flow or model needs any data assets or connections to run in the deployment space,
+promote them from the <span class="ph uicontrol">Assets</span> tab as well. </li>
+
+</ol>
+
+<p>In the deployment space, you can then create deployments and jobs to generate predictions for new
+data. For more information, see <a href="../wsj/analyze-data/ml-overview_local.html">Deploying AI assets</a>.</p>
+
+<p>For a list of which data sources are supported for models in <span class="keyword" data-hd-audience="cloud wx" translate="no">watsonx.ai Runtime</span>, refer to the
+<span class="ph uicontrol">SPSS</span> section under <a href="../wsj/analyze-data/deploy-batch-input-spss.html">Batch deployment input details for <span class="keyword">SPSS Modeler</span> models</a>.</p>
+
+</section>
+
+<section class="section" role="region" aria-labelledby="save_model__title__5"><h2 class="sectiontitle" id="save_model__title__5">Importing <span class="keyword">SPSS Modeler</span> models and flows into <span class="keyword" data-hd-audience="cloud wx" translate="no">watsonx.ai Runtime</span></h2>
+
+<p>If you want to deploy several models and flows to a deployment space, you can export the project
+that they are in and then import the project in the deployment space. For more information about
+exporting and importing projects, see <a href="../wsj/manage-data/export-project.html">Exporting project assets</a> and <a href="../wsj/analyze-data/ml-space-import-to-space.html">Importing space
+and project assets into deployment spaces</a>.</p>
+
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="save_model__title__1"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="spss-modeler.html" title="SPSS Modeler offers modeling algorithms that are taken from machine learning, artificial intelligence, and statistics. You can use these modeling algorithms to analyze your data and gain new business insights. With SPSS Modeler, you can quickly develop predictive models and deploy them into business operations.">Creating SPSS Modeler flows</a></div>
+</div>
+</nav></aside></article></main></body></html>
