@@ -35,13 +35,6 @@
     ]
   },
   {
-    "question": "What methodology does SPSS Modeler follow and which feature do you use to visualize data with histograms, box plots, bar charts, and pie charts within a flow?",
-    "correct_answer": "SPSS Modeler follows the CRISP-DM methodology, and you use the Chart builder feature to visualize data with histograms, box plots, bar charts, and pie charts within a flow.",
-    "correct_answer_document_ids": [
-      "data.html"
-    ]
-  },
-  {
     "question": "How do you define parameters in SPSS Modeler flows and how can you access the flow scripting editor to customize operations within a flow?",
     "correct_answer": "You define parameters by opening Flow properties and clicking Add value to set parameters available to all nodes; you access the scripting editor by clicking Scripting in the flow’s toolbar.",
     "correct_answer_document_ids": [
