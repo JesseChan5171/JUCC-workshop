@@ -82,3 +82,40 @@ This repository contains the evaluation dataset used to assess the convergence a
     ]
   }
 ]
+```
+###  Sample Questions for 'flow_properties.html'
+
+1. **Question:** What property controls how many rows are shown when you preview data for a node?  
+   **Answer:**  
+   > **Maximum number of rows to show in Data Preview**  
+   > When you preview the data for a node, you can specify the number of rows to show.
+
+2. **Question:** How does SPSS Modeler handle nominal (set) fields when they exceed a certain number of members?  
+   **Answer:**  
+   > **Limit members for nominal fields**  
+   > The data type of the nominal (set) fields becomes Typeless when the number of members exceeds the maximum number of members that you set in Maximum members. This option is useful when you are working with large nominal fields. When the measurement level of a field is set to Typeless, its role is automatically set to None. Fields that are set to None aren't available for modeling.
+
+3. **Question:** Which setting lets you import timestamps measured in microseconds?  
+   **Answer:**  
+   > **Use microseconds in timestamp fields**  
+   > If you have timestamp data that is measured in microseconds, you can enable this option to use the more precise data in your flows. To enable the option, select this checkbox and String for the Import date/time/timestamp as setting.  
+   > **Note:** This option works only for connectors that support SQL pushback.
+
+4. **Question:** What does the “Optimize CLEM expressions” option do?  
+   **Answer:**  
+   > **Optimize CLEM expressions**  
+   > This option enables the optimizer to search for CLEM expressions that can be preprocessed before the flow runs to increase the processing speed. For example, if you have an expression such as `log(salary)`, the optimizer calculates the actual salary value and passes that on for processing. This option can be used to improve both SQL pushback and SPSS Modeler performance.
+
+###  Sample Questions for 'flow_scripting_example.html'
+
+1. **Question:** What does the first line `stream = modeler.script.stream()` do in the flow scripting example?  
+   **Answer:**  
+   > It defines a variable that points to the current flow.
+
+2. **Question:** How does the script find the Neural Network builder node?  
+   **Answer:**  
+   > By calling `stream.findByType("neuralnetwork", None)`.
+
+3. **Question:** What is the purpose of the `results = []` line in the script?  
+   **Answer:**  
+   > It creates a list where the execution results can be stored.
